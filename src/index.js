@@ -1,17 +1,17 @@
-import { getProducts } from '/api.js';
+import { getProducts } from './api.js';
 
 
-let productsList = document.querySelector('#product-list')
+let productList = document.querySelector('#product-list');
+console.log(productList);
 getProducts().then((products) => {
-
     let template = '';
-    products.forEach(p => {
+    products.forEach((p) => {
         template += `
 <div class="col">
     <div class="card">
-        <img src=${p.imagen}class="card-img-top" alt="${p.tittle}">
+        <img src="${p.image}" class="card-img-top" alt="${p.title}">
             <div class="card-body">
-                <h5 class="card-title">${p.tittle}</h5>
+                <h5 class="card-title">${p.title}</h5>
                 <p class="card-text">${p.description}.</p>
             </div>
     </div>
@@ -20,8 +20,9 @@ getProducts().then((products) => {
 
     });
 
-    productsList.innerHTML = template;
+    productList.innerHTML = template;
 });
+
 
 
 
