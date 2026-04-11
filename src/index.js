@@ -9,10 +9,11 @@ getProducts().then((products) => {
         template += `
 <div class="col">
     <div class="card">
-        <img src="${p.image}" class="card-img-top" alt="${p.title}">
+        <img src="${p.thumbnail}" class="card-img-top" alt="${p.title}">
             <div class="card-body">
                 <h5 class="card-title">${p.title}</h5>
                 <p class="card-text">${p.description}.</p>
+                
             </div>
     </div>
 </div>  

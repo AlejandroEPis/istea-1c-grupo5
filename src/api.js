@@ -1,7 +1,7 @@
 export function getProducts() {
-    let res = fetch('https://fakestoreapi.com/products')
+    let res = fetch('https://dummyjson.com/products/category/mens-watches')
     .then((response) => response.json())
-    .then((data) => (data));
+    .then((data) => (data.products));
 
 
     return res;
