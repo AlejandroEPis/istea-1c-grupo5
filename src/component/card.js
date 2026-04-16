@@ -1,4 +1,5 @@
 import { getProducts } from "../api.js";
+import { Modal } from "./modal.js";
 
 
 export function RenderCards() {
@@ -15,14 +16,28 @@ export function RenderCards() {
             <h5 class="card-title">${p.title}</h5>
             <p class="card-text">${p.brand}</p
 
-            <div class="mt-auto">
-              <p class="precio">$${p.price}</p>
+            <div class="px-3 pb-3">
+            <button class="btn w-100 border rounded-pill mt-2 btnCard" id="btn-${p.id}">Mas detalles</button> 
             </div>
+
           </div>
         </div>
-      </div>`;
-    });
+      </div>
+      `;
+       });
+          productList.innerHTML = template;
 
-    productList.innerHTML = template;
-  });
+    //Accion Boton
+    products.forEach((p) => {
+      let btn = document.querySelector(`#btn-${p.id}`);
+      btn.addEventListener('click', () => {
+        Modal(p);
+      });
+
+
+
+
+    });
+ });
+ 
 } 
