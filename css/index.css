@@ -139,7 +139,7 @@ ul,li
     display: flex;
     flex-direction:row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
     padding: 50px;
     background-color: #FFFFFF;
@@ -155,15 +155,92 @@ ul,li
     width: 80px;
     height: 80px;
 }
-h3{
+h4{
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     text-align: center;
     margin-bottom: 0;
 }
-p{
+h2{
     font-family: 'Playfair Display', serif;
-    font-size: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+h3{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
     text-align: center;
 }
+.showcaseBoxText{
+    width: 100%;
+    padding-left: 30px;
+    padding-bottom: 0px;
+}
+.showcaseBoxText h2, .showcaseBoxText h3{
+    text-align: left;
+}
+.highlight-section {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
 
+#showcaseBox3{
+    background-color: #F2F2F2;
+}
+
+.highlight-item{
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.highlight-item img {
+    transition: all 0.4s ease;
+    padding: 20px;
+    transform: rotate(-30deg) scale(2.5); 
+}
+
+.highlight-card-image{
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    border-radius: 20px;
+    overflow:hidden;
+    position:relative;
+}
+#highlight-item-1 .highlight-card-image{
+    background: linear-gradient(135deg, #5a3e2b, #c8a27a);
+}
+
+#highlight-item-2 .highlight-card-image{
+    background: linear-gradient(135deg, #d4af37, #f5e6b3);
+}
+
+#highlight-item-3 .highlight-card-image{
+    background: linear-gradient(135deg, #1a1a1a, #4a4a4a);
+}
+
+.highlight-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.highlight-item img {
+    transition: all 0.3s ease;
+    padding: 20px;
+}
+
+
+.highlight-item:hover img {
+    transform: rotate(0deg) scale(2);
+    filter: brightness(1.1);
+}
