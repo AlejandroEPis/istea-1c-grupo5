@@ -126,6 +126,7 @@ h3{
     font-family: 'Playfair Display', serif;
     font-size: 1.25rem;
     text-align: center;
+    font-weight: 100;
 }
 .showcaseBoxText{
     width: 100%;
@@ -244,4 +245,69 @@ h3{
 .suscripcion-btn:hover {
     background-color: #333;
     color:#FAE9DF
+}
+
+.showcaseBox .showcaseBoxText h2{
+    text-align: center;
+}
+
+#information2{
+    display: flex;
+    flex-direction:row;
+    align-items: center;    
+    justify-content: space-between;
+    gap:20px;
+    padding: 50px;
+}
+#informationBoxText1, #informationBoxText3{
+    display: flex; 
+    flex-direction: column;
+    justify-content: left;
+    gap: 20px;
+    width: 50%;
+}
+#informationBoxText1 h2, #informationBoxText1 p{
+    text-align: left;
+}
+#informationBoxText3 h2, #informationBoxText3 p{
+    text-align: right;
+}
+#informationphoto1, #informationphoto3{
+width: 40%;
+border-radius: 20px;
+}
+
+p{
+    font-family: 'Playfair Display', serif;
+}
+
+#visit {
+    position: relative;
+    width: 100%;
+}
+
+#informationphoto2 {
+    width: 100%;
+    display: block;
+}
+
+#informationVisitBox1 {
+    background-color: #FAE9DF;
+    position: absolute;
+    top: 50%; 
+    left: 5%;
+    transform: translateY(-50%); 
+    width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+#information3{
+    display: flex;
+    flex-direction:row;
+    align-items: center;    
+    justify-content: space-between;
+    gap:20px;
+    padding: 50px;
 }
