@@ -1,28 +1,36 @@
 import { getProducts } from './api.js';
 
 
-let productList = document.querySelector('#product-list');
-console.log(productList);
+
+console.log(getProducts());
+//console.log(productList);
+
+graficarTarjetas('#showcaseprincipal',5);
+
+
+
+
+
+
+
+function graficarTarjetas(id,cantidad){
+let cardList = document.querySelector(`${id}`);
 getProducts().then((products) => {
     let template = '';
-    products.forEach((p) => {
+    products.slice(0,5).forEach((p) => { // Corto el array para solo mostrar los primeros 5
         template += `
-<div class="col">
     <div class="card">
         <img src="${p.thumbnail}" class="card-img-top" alt="${p.title}">
-            <div class="card-body">
-                <h5 class="card-title">${p.title}</h5>
-                <p class="card-text">${p.description}.</p>
-                
-            </div>
+        <div class="card-body">
+            <h5 class="card-title">${p.title}</h5>
+            <p class="card-price">$${p.price.toFixed(0)}</p>
+        </div>
     </div>
-</div>  
-     `;
-
+`;
     });
-
-    productList.innerHTML = template;
+    cardList.innerHTML = template;
 });
+}
 
 
 
