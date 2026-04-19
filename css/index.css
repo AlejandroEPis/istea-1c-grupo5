@@ -4,11 +4,11 @@ body{
 }
 ul,li
 {
-    list-style: none; /* De paso, esto quita los puntos (viñetas) de la lista */
+    list-style: none;
 }
 
 *{
-    box-sizing: border-box; /*para que el padding se incluya dentro del 100% */
+    box-sizing: border-box; 
 }
 /* =======================================================*/
 /*Estilado de la primera parte */
@@ -24,7 +24,7 @@ ul,li
     object-fit: cover;
 }
 
-#video1 h1 { /* lo pongo para centrar el texto */
+#video1 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
     font-weight: 600;
@@ -55,55 +55,10 @@ ul,li
     grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
     justify-content: center;
     gap: 10px;
-    
     padding:20px;
     margin: auto;
 }
 /* =======================================================*/
-/*Estilado de las card */
-
-.card{
-    background-color: #FFFFFF;
-    height: auto;
-    display:flex;
-    flex-direction: column;
-    align-items:center;
-    padding: 15px;
-    justify-content: flex-start;
-    border: none;
-    border-radius: 35px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    overflow:hidden;
-    position: relative;
-}
-.card-img-top{
-    max-height: 150px;
-    transition: transform 0.4s ease;
-}
-.card-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    text-align: center;
-}
-.card-price {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
-    text-align: center;
-    margin-top: 5px;
-}
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 
-        0 10px 25px rgba(0,0,0,0.15),
-        0 0 0 2px rgba(255, 200, 150, 0.3);
-}
-.card:hover .card-img-top {
-    transform: scale(1.05);
-    border-radius: 50px;
-    filter: brightness(1.15) contrast(1.15);
-    background: radial-gradient(circle, rgba(255,255,255,0) 60%, rgba(255, 220, 180, 0.25) 100%);
-}
 
 .showcaseBox {
     background-color: #FAE9DF;
@@ -114,7 +69,8 @@ ul,li
     gap: 20px;
     padding: 20px;
 }
-.btn {
+/* Cambio de .btn a .custom-btn */
+.custom-btn {
     display: inline-block;
     padding: 12px 25px;
     color: #000;
@@ -124,10 +80,9 @@ ul,li
     font-family: 'Playfair Display', serif;
     transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
 }
 
-.btn:hover {
+.custom-btn:hover {
     background-color: #e7c1ab;
     transform: translateY(-2px);
 }
