@@ -244,3 +244,49 @@ h3{
     transform: rotate(0deg) scale(2);
     filter: brightness(1.1);
 }
+
+/* =======================================================*/
+#contact {
+    padding: 60px 20px;
+    background-color: #FAE9DF;
+    text-align: center;
+}
+
+#contact h3 {
+    margin-bottom: 25px;
+}
+
+.suscripcion {
+    background-color: #FFA683;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.suscripcion-input, .suscripcion-btn {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.suscripcion-input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.suscripcion-btn {
+    background-color: #FFFFFF;
+    color: #754c3c;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+}
+
+.suscripcion-btn:hover {
+    background-color: #333;
+    color:#FAE9DF
+}
