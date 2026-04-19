@@ -4,7 +4,68 @@
 
 .btnCard{
     background-color: #fae9df;
+      border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+.btnCard {
+  transition: all 0.3s ease;
+}
+
+.btnCard:hover {
+  background-color: #dbbadd; 
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.btnCard:hover {
+  animation: pulse 0.6s ease;
+}
+
+.card {
+  transition: all 0.3s ease;
+}
+
+.card img {
+  transition: all 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
 }
 
 
+@media (max-width: 576px) {
+  #product-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    flex-wrap: nowrap;
+    padding-bottom: 10px;
+  }
 
+  #product-list .col {
+    flex: 0 0 auto;
+    width: 75%;
+    display: flex;
+    justify-content: center; 
+  }
+
+  #product-list .card {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+ 
+  #product-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  #product-list {
+    scrollbar-width: none;
+  }
+}

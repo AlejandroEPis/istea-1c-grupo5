@@ -33,7 +33,7 @@ export function Modal(prod) {
                 </div>
             </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-primary btnMC" id="addToCard-${prod.id}">Agregar al Carrito</button>
+            <button type="button" class="btn btn-primary text-dark btnMC" id="addToCard-${prod.id}">Agregar al Carrito</button>
         </div>
     </div>
 </div>
