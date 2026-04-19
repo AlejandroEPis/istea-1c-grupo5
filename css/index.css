@@ -311,3 +311,16 @@ p{
     gap:20px;
     padding: 50px;
 }
+
+#testimonialCarousel {
+    background-color: #FAE9DF !important;
+    font-family: 'Playfair Display', serif;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+}
+
+.text-success {
+    color: #00b67a !important;
+}
