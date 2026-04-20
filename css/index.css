@@ -48,7 +48,7 @@ ul,li
 }
 /* =======================================================*/
 /*Estilado vitrina*/
-.showcase {
+.showcase{
     width:100%;
     height: auto;
     display: flex;
@@ -161,6 +161,7 @@ h3{
     gap: 20px;
     padding: 20px;
     justify-content: center;
+    flex-direction:row;
 }
 
 #showcaseBox3{
@@ -172,10 +173,13 @@ h3{
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+    max-width: 400px;
     width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
 }
 .highlight-item img {
@@ -312,6 +316,8 @@ p{
 }
 
 #informationVisitBox1 {
+    display: flex;
+    flex-direction: column;
     background-color: #FAE9DF;
     position: absolute;
     top: 50%; 
@@ -349,5 +355,46 @@ p{
 @media (max-width: 1200px) {
     .showcase {
         justify-content: flex-start;
+    }
+}
+
+@media (max-width:768px){
+    .highlight-section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .highlight-item{
+        width: 90%;
+    }
+    #information1{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .miniInfo{
+        width: 80%;
+    }
+    #information2, #information3{
+        flex-direction: column;
+    }
+    #informationBoxText1, #informationBoxText3 {
+        width: 100%;
+    }
+    #informationphoto1, #informationphoto3{
+        width: 100%;
+    }
+    #informationVisitBox1{
+        height: 80%;
+        width: 80%;
+        flex-direction: row;
+        left: 10%;
+        align-items: center;
+    }
+    #video1 {
+    height: 30vh;
+    }
+    #video1 h1 {
+        font-size: 1.5rem;
     }
 }
