@@ -51,12 +51,32 @@ ul,li
 .showcase {
     width:100%;
     height: auto;
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
-    justify-content: center;
+    display: flex;
     gap: 10px;
-    padding:20px;
+    padding: 20px;
     margin: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.showcase::-webkit-scrollbar {
+    height: 10px;
+}
+
+.showcase::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.showcase::-webkit-scrollbar-thumb {
+    background: #c8a27a;
+    border-radius: 5px;
+}
+
+.showcase::-webkit-scrollbar-thumb:hover {
+    background: #a67c52;
 }
 /* =======================================================*/
 
@@ -323,4 +343,11 @@ p{
 
 .text-success {
     color: #00b67a !important;
+}
+
+
+@media (max-width: 1200px) {
+    .showcase {
+        justify-content: flex-start;
+    }
 }
