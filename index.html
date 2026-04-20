@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
@@ -22,188 +24,12 @@
         </nav>
     </Header>
 
-    <main>
-        <div class="videocontainer" id="video1">
-            <video autoplay muted loop class="video">
-                <source src="./video/video.mp4" type="video/mp4">
-            </video>
-            <h1>Tu reloj a medida, cuando más lo necesites</h1>
-        </div>
-        <div class ="showcaseBox" id="showcaseBox1">
-            <div class="showcase" id="showcaseprincipal">
-            </div>
-            <li>
-                <a href="catalogo.html" class="custom-btn">Mirá todos nuestros productos</a>
-            </li>
-        </div>
-        <div class="information" id="information1">
-            <div class="miniInfo">
-                <img src="img/icono1.svg" class="iconoInfo">
-                <h4>Hechos a medida</h4>
-                <p>Nuestros relojes son realizados bajo las características solicitadas por el cliente.</p>
-            </div>
-            <div class="miniInfo">
-                <img src="img/icono2.svg" class="iconoInfo">
-                <h4>Diseño único</h4>
-                <p>Cada pieza es diseñada de forma exclusiva para reflejar tu estilo personal.</p>
-            </div>
-            <div class="miniInfo">
-                <img src="img/icono3.svg" class="iconoInfo">
-                <h4>Envíos a todo el país</h4>
-                <p>Recibí tu reloj donde estés, con seguimiento y seguridad garantizada.</p>
-            </div>
-        </div>
-        <div class ="showcaseBox" id="showcaseBox2">
-            <div class="showcaseBoxText">
-            <h2>Relojes Remix</h2>
-            <h3>
-                Tomamos algunos de nuestros diseños más icónicos y los reinterpretamos desde su esencia,
-                como escuchar una versión acústica de tu canción favorita.
-            </h3>
-            </div>
-            <div class="showcase" id="showcaseremix">
-            </div>
-            <li>
-                <a href="catalogo.html" class="custom-btn">Mirá también nuestras colecciones remixadas</a>
-            </li>
-        </div>
-
-        <div class ="showcaseBox" id="showcaseBox3">
-            <div class="showcaseBoxText">
-            <h2>Relojes destacados de nuestra colección</h2>
-            </div>
-            <div class="highlight-section">
-                <div class="highlight-item" id="highlight-item-1">
-                    <!-- se llena desde el render -->
-                </div>
-                <div class="highlight-item" id="highlight-item-2">
-                    <!-- se llena desde el render -->
-                </div>
-                <div class="highlight-item" id="highlight-item-3">
-                    <!-- se llena desde el render -->
-                </div>
-            </div>
-        </div>
-
-        <div class="information" id="contact">
-            <h2>Sumate para recibir todas nuestras novedades</h2>
-            <h3>Dejanos tu email para ser el primero en enterarte sobre relojes de edición limitada, descuentos y más.</h3>
-            
-            <form class="suscripcion" action="#" method="POST" onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!');">
-                <input type="text" class="suscripcion-input" placeholder="Tu nombre" required>
-                <input type="email" class="suscripcion-input" placeholder="Tu email" required>
-                <button type="submit" class="suscripcion-btn">Suscribirme</button>
-            </form>
-        </div>
-        <div class="showcaseBox" id = "showcaseBox4">
-            <div class="showcaseBoxText">
-            <h2>Relojes Mecanicos, impulsados por tu movimiento</h2>
-            </div>
-            <div class="showcase" id="showcaseMechanical">
-                <!-- se llena desde el render -->
-            </div>
-            <li>
-                <a href="catalogo.html" class="custom-btn">Compra relojes mecanicos</a>
-            </li>
-        </div>
-
-        <div class="information" id="information2">
-            <div class="informationBoxText" id="informationBoxText1">
-                <h2>Orgullosamente hechos en Buenos Aires</h2>
-                <p>Creamos relojes únicos que cuentan una historia, inician una conversación o, simplemente, te sacan una sonrisa.</p>
-                <p>Somos un equipo apasionado trabajando desde nuestro taller para acercarte piezas que salen de lo común.</p>
-                <p>Cada color que ves en nuestros relojes fue preparado a mano y aplicado capa por capa, antes de ser ensamblado y testeado minuciosamente por nuestro talento local.</p>
-                <li>
-                <a href="catalogo.html" class="custom-btn">Mira nuestros relojes</a>
-                </li>
-            </div>
-            <img src="img/foto1.png" class="informationphoto" id="informationphoto1">
-        </div>
-
-        <div class="showcaseBox" id = "showcaseBox5">
-            <div class="showcaseBoxText">
-            <h2>Relojes dorados, haz que tu tiempo brille</h2>
-            </div>
-            <div class="showcase" id="showcaseGilded">
-                <!-- se llena desde el render -->
-            </div>
-            <li>
-                <a href="catalogo.html" class="custom-btn">Compra relojes dorados</a>
-            </li>
-        </div>
-        <div class="information" id="visit">
-            <img src="img/foto2.png" class="informationphoto" id="informationphoto2">
-            <div class="informationVisitBox" id="informationVisitBox1">
-                <div class="informationVisitBoxText" id="informationVisitBoxText1">
-                    <h2>Visitá nuestro taller en Palermo</h2>
-                    <p>Av. del Libertador 2677, C1425 Cdad. Autónoma de Buenos Aires</p>
-                    <p>Lunes - Jueves: 11am - 7pm</p>
-                    <p>Viernes - Sabado: 10am - 7pm</p>
-                    <p>Domingo: 12pm - 6pm</p>
-                </div>
-                <li>
-                    <a href="https://maps.app.goo.gl/gLdEmNVdKWcV3qPy8" class="custom-btn" target="_blank">Visitanos!</a>
-                </li>    
-            </div>
-        </div>
-
-        <div class="information" id="information3">
-            <img src="img/foto3.png" class="informationphoto" id="informationphoto3">
-            <div class="informationBoxText" id="informationBoxText3">
-                <h2>Relojes diseñados por artistas</h2>
-                <p>
-                Para seguir desafiando los límites del diseño de relojería, 
-                colaboramos con talentosos artistas e ilustradores de todo el mundo.
-                </p>
-                <p>
-                Trabajar con otros creativos nos permite ofrecerte siempre 
-                los relojes más únicos, interesantes y con una historia propia.
-                </p>
-            </div>
-            
-        </div>
-        <div id="testimonialCarousel" class="carousel slide bg-light p-5" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                <div class="container">
-                    <div class="row text-start justify-content-center">
-                    <div class="col-md-3">
-                        <div class="text-success mb-1">★★★★★</div>
-                        <h6 class="fw-bold">Excelente respuesta rápida</h6>
-                        <p class="small text-muted">La atención fue increíble y el reloj volvió impecable...</p>
-                        <span class="small fw-bold">Lucas</span>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="text-success mb-1">★★★★★</div>
-                        <h6 class="fw-bold">Segunda compra</h6>
-                        <p class="small text-muted">Amo los relojes de Istea, ya tengo varios en mi colección...</p>
-                        <span class="small fw-bold">Alejandro</span>
-                    </div>
-                    
-                    <div class="col-md-3">
-                        <div class="text-success mb-1">★★★★★</div>
-                        <h6 class="fw-bold">Increíble diseño</h6>
-                        <p class="small text-muted">El 'Beam Me Up' es mi favorito por lejos...</p>
-                        <span class="small fw-bold">Lucas</span>
-                    </div>
-                    </div>
-                </div>
-                </div>
-
-                </div>
-            
-            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
-            </button>
-            </div>
+    <main id="main">
+        
     </main>
-
-    <footer></footer>
-
+    <footer>
+    <div id="footer-container"></div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>

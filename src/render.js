@@ -3,6 +3,15 @@ import { crearHTMLTarjeta } from './card.js';
 import { crearHTMLTarjetaHighlight } from './card.js';
 
 console.log(getProducts());
+
+export function cargarComponente(ruta, id) {
+    return fetch(ruta)
+    .then(res => res.text())
+    .then(data => {
+    document.getElementById(id).innerHTML = data;
+    });
+}
+
 export function graficarDestacados(){
     let destacado1 = document.querySelector(`#highlight-item-1`);
     let destacado2 = document.querySelector(`#highlight-item-2`);
