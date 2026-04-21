@@ -1,28 +1,19 @@
-import { getProducts } from './api.js';
+import { graficarDestacados } from './render.js';
+import { graficarTarjetas } from './render.js';
+import { cargarComponente } from './render.js';
 
-
-let productList = document.querySelector('#product-list');
-console.log(productList);
-getProducts().then((products) => {
-    let template = '';
-    products.forEach((p) => {
-        template += `
-<div class="col">
-    <div class="card">
-        <img src="${p.thumbnail}" class="card-img-top" alt="${p.title}">
-            <div class="card-body">
-                <h5 class="card-title">${p.title}</h5>
-                <p class="card-text">${p.description}.</p>
-                
-            </div>
-    </div>
-</div>  
-     `;
-
-    });
-
-    productList.innerHTML = template;
+cargarComponente('./main.html','main').then(() => { /*Hago esto porque sino no me cargaba los relojes, tengo que esperar que se arme el DOM*/
+    graficarTarjetas('#showcaseprincipal',5);
+    graficarTarjetas('#showcaseremix',5);
+    graficarDestacados();
+    graficarTarjetas('#showcaseMechanical',5);
+    graficarTarjetas('#showcaseGilded',5);
 });
+
+cargarComponente('./footer.html','footer-container'); /*Por fuera da igual*/
+
+
+
 
 
 
