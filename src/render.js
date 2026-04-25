@@ -1,6 +1,7 @@
 import { getProducts } from './api.js';
 import { crearHTMLTarjeta } from './card.js';
 import { crearHTMLTarjetaHighlight } from './card.js';
+import {toggleNavbarIcon} from "./navbar.js";
 
 console.log(getProducts());
 
@@ -9,6 +10,7 @@ export function cargarComponente(ruta, id) {
     .then(res => res.text())
     .then(data => {
     document.getElementById(id).innerHTML = data;
+    toggleNavbarIcon();
     });
 }
 

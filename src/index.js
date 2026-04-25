@@ -1,22 +1,23 @@
-import { RenderCards } from "./component/card.js";
-import { getProducts } from "./services/api.js";
+import { graficarDestacados } from './render.js';
+import { graficarTarjetas } from './render.js';
+import { cargarComponente } from './render.js';
 
 
 
 
-getProducts().then((products) => {
-    let inputSearch = document.querySelector('#inputSearch');
-    inputSearch.addEventListener('input', (event) => {
-        console.log(event.target.value);
-        let query = event.target.value;
-        if (query !== '') {
-           let result = products.filter((p) => p.title.toLowerCase().includes(query.toLowerCase()));
-           RenderCards(result);
-           return;
-        }
-           RenderCards(products);
-    });
-    RenderCards(products);
+document.addEventListener("DOMContentLoaded", () => {
+    graficarTarjetas('#showcaseprincipal',5);
+    graficarTarjetas('#showcaseremix',5);
+    graficarDestacados();
+    graficarTarjetas('#showcaseMechanical',5);
+    graficarTarjetas('#showcaseGilded',5);
+    cargarComponente('./footer.html','footer-container');
+    cargarComponente('./navbar.html','navbar-container');
 });
+
+
+
+
+
 
 
