@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
     graficarDestacados();
     graficarTarjetas('#showcaseMechanical',5);
     graficarTarjetas('#showcaseGilded',5);
-    cargarComponente('./footer.html','footer-container'); 
+    cargarComponente('./footer.html','footer-container');
+    cargarComponente('./navbar.html','navbar-container');
 });
 
 
