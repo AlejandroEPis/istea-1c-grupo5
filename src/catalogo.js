@@ -1,4 +1,4 @@
-import { RenderCards } from "./component/card.js";
+import { RenderCards } from "./component/cardCat.js";
 import { getProducts } from "./services/api.js";
 
 
