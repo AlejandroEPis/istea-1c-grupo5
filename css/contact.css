@@ -1,0 +1,21 @@
+.contact-info {
+    background-color: #fae9df;
+}
+
+.contact-form {
+    background-color: #dabadd;
+}
+
+.contact-form input, .contact-form textarea,
+.contact-form input:focus, .contact-form textarea:focus {
+    background-color: #f9e9df;
+}
+
+.contact-form button {
+    background-color: #0f0f0f;
+    color: #dabadd;
+    border: none;
+    border-radius: 100px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
