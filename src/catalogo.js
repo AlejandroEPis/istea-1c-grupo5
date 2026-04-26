@@ -1,7 +1,9 @@
 import { RenderCards } from "./component/cardCat.js";
 import { getProducts } from "./services/api.js";
+import { cargarComponente } from "./render.js";
 
-
+cargarComponente("navbar.html", "navbar-container");
+cargarComponente("footer.html", "footer-container");
 
 
 getProducts().then((products) => {
