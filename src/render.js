@@ -1,7 +1,8 @@
 import { getProducts } from './api.js';
 import { crearHTMLTarjeta } from './card.js';
 import { crearHTMLTarjetaHighlight } from './card.js';
-import {toggleNavbarIcon} from "./navbar.js";
+import {productItemHTML} from "./cart.js";
+import {getCartProducts, getCartTotal} from "./storage/cart-local-storage.js";
 
 console.log(getProducts());
 
@@ -10,7 +11,6 @@ export function cargarComponente(ruta, id) {
     .then(res => res.text())
     .then(data => {
     document.getElementById(id).innerHTML = data;
-    toggleNavbarIcon();
     });
 }
 
@@ -37,4 +37,29 @@ export function graficarTarjetas(id,cantidad){
         });
         cardList.innerHTML = template;
     });
+}
+
+export function graficarProductosCarrito() {
+    const cartItems = document.getElementById('cart-items');
+
+    if (!cartItems) return;
+
+    cartItems.innerHTML = '';
+    const productos = getCartProducts();
+
+    console.log(productos);
+
+    productos.forEach(item => {
+        const itemHTML = productItemHTML(item.image, item.title, item.price, item.quantity);
+        cartItems.innerHTML += itemHTML;
+    });
+}
+
+export function graficarPrecioTotalCarrito() {
+    const totalPrice = document.getElementById('cart-total-price');
+
+    if (!totalPrice) return;
+
+    const total = getCartTotal();
+    totalPrice.textContent = `$${total.toFixed(2)}`;
 }
