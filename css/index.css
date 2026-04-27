@@ -60,6 +60,8 @@ ul,li
     scroll-behavior: smooth;
     box-sizing: border-box;
     justify-content: center;
+    flex-wrap: nowrap;
+    max-width: 1200px;
 }
 
 .showcase::-webkit-scrollbar {
