@@ -1,5 +1,5 @@
 import { getProducts } from "../services/api.js";
-import { Modal } from "../component/modal.js";
+import { Modal } from "../component/modalCat.js";
 
 
 export function RenderCards(products) {

@@ -1,7 +1,6 @@
 export function Modal(prod) {
     let container = document.querySelector('#productModal');
 
-
 let template = `
 <div class="modal-dialog">
   <div class="modal-content">
@@ -59,7 +58,6 @@ let template = `
     boostrapModal.show();
 
 
-
     const carousel = document.querySelector('#carouselModal');
 
     new bootstrap.Carousel(carousel, {
@@ -72,14 +70,14 @@ const btnAdd = document.getElementById(`addToCard-${prod.id}`);
 btnAdd.addEventListener('click', () => {
 
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-
+    console.log(`Agregando producto: ${prod.title} (ID: ${prod.id})`);
     carrito.push({
         id: prod.id,
         title: prod.title,
         price: prod.price
     });
-
     localStorage.setItem('carrito', JSON.stringify(carrito));
+    console.log('Carrito:', carrito);
 
     const toastElement = document.getElementById('cartToast');
     const toast = new bootstrap.Toast(toastElement);
@@ -88,5 +86,12 @@ btnAdd.addEventListener('click', () => {
     const modalInstance = bootstrap.Modal.getInstance(container);
     modalInstance.hide();
 
+    // Limpiar modal
+    container.addEventListener('hidden.bs.modal', () => { // se dispara cuando se cerro del todo
+        document.body.classList.remove('modal-open'); // le saco la clase body porque me bloqueaba el scroll
+        document.body.style.overflow = ''; // tambien para devolver el scroll
+        const backdrops = document.querySelectorAll('.modal-backdrop'); // limpio el fondo oscuro
+        backdrops.forEach(backdrop => backdrop.remove());
+    }, { once: true }); // para que lo haga una sola vez (no se acumulen los listeners)
 });
 }   

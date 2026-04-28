@@ -1,6 +1,11 @@
 export function Modal(prod) {
     let container = document.querySelector('#productModal');
 
+    //Agrego esto, que destruye cualquier instancia previa
+    const existingModal = bootstrap.Modal.getInstance(container);
+    if (existingModal) {
+        existingModal.dispose();
+    }
 
     let template = `
   <div class="modal-dialog">

@@ -1,10 +1,10 @@
-import { getProducts } from './api.js';
+import { getProducts } from './services/api.js';
 import { crearHTMLTarjeta } from './card.js';
 import { crearHTMLTarjetaBs } from './card.js';
 import { crearHTMLTarjetaHighlight } from './card.js';
 import { crearHTMLTarjetaHighlightBs } from './card.js';
 import {toggleNavbarIcon} from "./navbar.js";
-/*import { modal } from './component/modal.js';*/
+import {Modal} from './component/modalCat.js';
 
 
 console.log(getProducts());
@@ -55,7 +55,7 @@ export function graficarTarjetasBs(id, cantidad) {
         products.slice(0, cantidad).forEach((p) => {
             let btn = document.querySelector(`#btn-${p.id}`);
             btn.addEventListener('click', () => {
-                console.log("modal(p);");
+                Modal(p);
             });
         });
     });
