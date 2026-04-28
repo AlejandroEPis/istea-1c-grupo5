@@ -1,8 +1,8 @@
 import { getProducts } from './services/api.js';
-import { crearHTMLTarjeta } from './card.js';
-import { crearHTMLTarjetaBs } from './card.js';
-import { crearHTMLTarjetaHighlight } from './card.js';
-import { crearHTMLTarjetaHighlightBs } from './card.js';
+import { crearHTMLTarjeta } from './component/cardIndex.js';
+import { crearHTMLTarjetaBs } from './component/cardIndex.js';
+import { crearHTMLTarjetaHighlight } from './component/cardIndex.js';
+import { crearHTMLTarjetaHighlightBs } from './component/cardIndex.js';
 import {toggleNavbarIcon} from "./navbar.js";
 import {Modal} from './component/modalCat.js';
 
