@@ -1,3 +1,5 @@
+import { showToast } from './toast.js';
+
 export function Modal(prod) {
     let container = document.querySelector('#productModal');
 
@@ -79,9 +81,7 @@ btnAdd.addEventListener('click', () => {
     localStorage.setItem('carrito', JSON.stringify(carrito));
     console.log('Carrito:', carrito);
 
-    const toastElement = document.getElementById('cartToast');
-    const toast = new bootstrap.Toast(toastElement);
-    toast.show();
+    showToast('Producto agregado al carrito');
 
     const modalInstance = bootstrap.Modal.getInstance(container);
     modalInstance.hide();
