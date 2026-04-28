@@ -26,9 +26,9 @@ export function crearHTMLTarjetaBs(p) {
     return `
         <div class="col">
         <div class="card h-100 d-flex flex-column">
-          <img src="${p.thumbnail}" class="card-img-top " alt="${p.title}" style="height: 300px; width: 200px; object-fit: cover;">
+        <img src="${p.thumbnail}" class="card-img-top " alt="${p.title}" style="height: 300px; width: 200px; object-fit: cover;">
 
-          <div class="card-body d-flex flex-column">
+        <div class="card-body d-flex flex-column">
             <h5 class="card-title">${p.title}</h5>
             <p class="card-text">${p.brand}</p>
 
@@ -36,9 +36,9 @@ export function crearHTMLTarjetaBs(p) {
             <button class="btn w-100 border rounded-pill mt-2 btnCard" id="btn-${p.id}">Mas detalles</button> 
             </div>
 
-          </div>
         </div>
-      </div>
+        </div>
+    </div>
     `;
 }
 
