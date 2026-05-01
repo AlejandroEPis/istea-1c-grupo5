@@ -50,4 +50,14 @@
         top: 45px;
         right: 0;
     }
+
+    .cart-offcanvas {
+        width: 30% !important;
+        left: 65% !important;
+        top: 13% !important;
+    }
+
+    #checkout-button {
+
+    }
 }
