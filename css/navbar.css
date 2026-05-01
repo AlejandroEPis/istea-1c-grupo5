@@ -35,18 +35,18 @@
 }
 
 @media (min-width: 992px) {
-    .navbar-items {
-        background-color: #ffff !important;
-        border: none !important;
+    .navbar-collapse .navbar-items.border {
+        background-color: #fff !important;
+        border: 0 !important;
     }
 
     .nav-item {
-        background-color: #ffff !important;
+        background-color: #fff !important;
         padding: 0;
     }
 
     #cart-button {
-        position: absolute;
+        position: absolute !important;
         top: 45px;
         right: 0;
     }
