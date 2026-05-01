@@ -50,7 +50,7 @@ export function graficarProductosCarrito() {
     console.log(productos);
 
     productos.forEach(item => {
-        const itemHTML = productItemHTML(item.image, item.title, item.price, item.quantity);
+        const itemHTML = productItemHTML(item.id, item.image, item.title, item.price, item.quantity);
         cartItems.innerHTML += itemHTML;
     });
 }
