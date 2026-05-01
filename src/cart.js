@@ -1,4 +1,5 @@
 import {getCartItemCount, updateCartItemQuantity} from "./storage/cart-local-storage.js";
+import {graficarPrecioTotalCarrito} from "./render.js";
 
 export function renderCartLength() {
     const cartItemCount = getCartItemCount();
@@ -48,9 +49,12 @@ export function quantityButtonsAddEventListeners() {
             if (current === 0) {
                 const cartItem = event.target.closest('.cart-item');
                 cartItem.remove();
+                graficarPrecioTotalCarrito();
+                renderCartLength();
                 return;
             }
-
+            graficarPrecioTotalCarrito();
+            renderCartLength();
             quantityValue.textContent = current;
         }
     });

@@ -25,9 +25,15 @@ export function updateCartItemQuantity(productId, quantity) {
 }
 
 export function getCartTotal() {
-    return getCartProducts().reduce((total, product) => total + product.price, 0);
+    return getCartProducts().reduce(
+        (total, product) => total + (product.price * product.quantity),
+        0
+    );
 }
 
 export function getCartItemCount() {
-    return getCartProducts().length;
+    return getCartProducts().reduce(
+        (count, product) => count + product.quantity,
+        0
+    );
 }
