@@ -1,4 +1,7 @@
 import { showToast } from './toast.js';
+import { saveCartProducts, getCartProducts } from "../storage/cart-local-storage.js";
+import {graficarPrecioTotalCarrito, graficarProductosCarrito} from "../render.js";
+import {renderCartLength} from "../cart.js";
 
 export function Modal(prod) {
     let container = document.querySelector('#productModal');
@@ -71,15 +74,22 @@ const btnAdd = document.getElementById(`addToCard-${prod.id}`);
 
 btnAdd.addEventListener('click', () => {
 
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    console.log(`Agregando producto: ${prod.title} (ID: ${prod.id})`);
-    carrito.push({
+    const cartProducts = getCartProducts();
+
+    const productItem = {
         id: prod.id,
+        image: prod.thumbnail,
         title: prod.title,
-        price: prod.price
-    });
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-    console.log('Carrito:', carrito);
+        price: prod.price,
+        quantity: 1
+    };
+
+    cartProducts.push(productItem);
+
+    saveCartProducts(cartProducts);
+    renderCartLength();
+    graficarProductosCarrito();
+    graficarPrecioTotalCarrito();
 
     showToast('Producto agregado al carrito');
 
