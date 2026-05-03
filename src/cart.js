@@ -16,7 +16,7 @@ export function productItemHTML(id, image, title, price, quantity) {
     <li class="cart-item my-4">
         <div class="cart-item-details d-flex justify-content-between align-items-center border-bottom border-1 border-warning pb-4">
             <img class="cart-item-img bg-white" src="${image}" alt="${title}">
-            <div>
+            <div class="d-flex flex-column align-items-center">
                 <div class="cart-item-title">${title}</div>
                 <div class="quantity-button-container border border-1 border-warning mt-2">
                     <button class="btn quantity-button-remove" data-product-id="${id}">-</button>
