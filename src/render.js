@@ -3,9 +3,9 @@ import { crearHTMLTarjeta } from './component/cardIndex.js';
 import { crearHTMLTarjetaBs } from './component/cardIndex.js';
 import { crearHTMLTarjetaHighlight } from './component/cardIndex.js';
 import { crearHTMLTarjetaHighlightBs } from './component/cardIndex.js';
-import {toggleNavbarIcon} from "./navbar.js";
 import {Modal} from './component/modalCat.js';
-
+import {productItemHTML} from "./cart.js";
+import {getCartProducts, getCartTotal} from "./storage/cart-local-storage.js";
 
 console.log(getProducts());
 
@@ -14,7 +14,6 @@ export function cargarComponente(ruta, id) {
     .then(res => res.text())
     .then(data => {
     document.getElementById(id).innerHTML = data;
-    toggleNavbarIcon();
     });
 }
 
@@ -75,3 +74,29 @@ export function graficarDestacadosBs(){
     });
 }
 
+
+
+export function graficarProductosCarrito() {
+    const cartItems = document.getElementById('cart-items');
+
+    if (!cartItems) return;
+
+    cartItems.innerHTML = '';
+    const productos = getCartProducts();
+
+    console.log(productos);
+
+    productos.forEach(item => {
+        const itemHTML = productItemHTML(item.id, item.image, item.title, item.price, item.quantity);
+        cartItems.innerHTML += itemHTML;
+    });
+}
+
+export function graficarPrecioTotalCarrito() {
+    const totalPrice = document.getElementById('cart-total-price');
+
+    if (!totalPrice) return;
+
+    const total = getCartTotal();
+    totalPrice.textContent = `$${total.toFixed(2)}`;
+}
