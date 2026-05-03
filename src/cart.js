@@ -14,7 +14,7 @@ export function renderCartLength() {
 export function productItemHTML(id, image, title, price, quantity) {
     return `
     <li class="cart-item my-4">
-        <div class="cart-item-details d-flex justify-content-between align-items-center border-bottom border-1 border-warning pb-4">
+        <div class="cart-item-details d-flex justify-content-between align-items-center border-bottom border-1 border-warning pb-4 gap-1">
             <img class="cart-item-img bg-white" src="${image}" alt="${title}">
             <div class="d-flex flex-column align-items-center">
                 <div class="cart-item-title">${title}</div>
