@@ -52,7 +52,7 @@ export function graficarTarjetasBs(id, cantidad) {
         cardList.innerHTML = template;
 
         products.slice(0, cantidad).forEach((p) => {
-            let btn = document.querySelector(`#btn-${p.id}`);
+            let btn = cardList.querySelector(`#btn-${p.id}`);
             btn.addEventListener('click', () => {
                 Modal(p);
             });

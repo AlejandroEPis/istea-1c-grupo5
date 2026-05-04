@@ -1,5 +1,7 @@
 import { RenderCards } from "./component/cardCat.js";
 import { getProducts } from "./services/api.js";
+import { graficarProductosCarrito, graficarPrecioTotalCarrito } from "./render.js";
+import { quantityButtonsAddEventListeners, renderCartLength } from "./cart.js";
 
 fetch("navbar.html")
     .then(res => res.text())
@@ -9,6 +11,10 @@ fetch("navbar.html")
     })
     .then(module => {
         module.toggleNavbarIcon();
+        renderCartLength();
+        graficarProductosCarrito();
+        graficarPrecioTotalCarrito();
+        quantityButtonsAddEventListeners();
     });
 
 fetch("footer.html")
