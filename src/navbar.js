@@ -11,4 +11,15 @@ export function toggleNavbarIcon() {
         navbarIcon.classList.remove('bi-x');
         navbarIcon.classList.add('bi-list');
     });
+
+    const checkoutBtn = document.getElementById('checkout-button');
+    if (checkoutBtn) {
+        checkoutBtn.addEventListener('click', () => {
+            localStorage.removeItem('cart');
+            document.getElementById('cart-items').innerHTML = '';
+            document.getElementById('cart-badge').textContent = '0';
+            document.getElementById('cart-total-price').innerHTML = '';
+            alert('Gracias por tu compra!');
+        });
+    }
 }
