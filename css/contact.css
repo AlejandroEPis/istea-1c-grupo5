@@ -1,3 +1,7 @@
+.contact-info ,.contact-form {
+    font-family: 'Playfair Display', serif
+}
+
 .contact-info {
     background-color: #fae9df;
 }
@@ -18,4 +22,37 @@
     border-radius: 100px;
     padding: 10px 20px;
     cursor: pointer;
+}
+
+@media (min-width: 992px) {
+    .contact-info.container,
+    .contact-form.container {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .inputs-container-name-email {
+        flex-direction: row !important;
+        gap: 8px;
+    }
+
+    .contact-form button:hover {
+        background-color: #0F0F0FD1;
+        color: #dabadd;
+    }
 }
