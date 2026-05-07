@@ -1,8 +1,6 @@
-import { graficarDestacados, graficarDestacadosBs, graficarTarjetasBs, graficarPrecioTotalCarrito, graficarProductosCarrito } from './render.js';
-import { graficarTarjetas } from './render.js';
+import { graficarDestacadosBs, graficarTarjetasBs, graficarPrecioTotalCarrito, graficarProductosCarrito } from './render.js';
 import { cargarComponente } from './render.js';
 import {quantityButtonsAddEventListeners, renderCartLength} from "./cart.js";
-import {saveCartProducts} from "./storage/cart-local-storage.js";
 import {toggleNavbarIcon} from "./navbar.js";
 
 
